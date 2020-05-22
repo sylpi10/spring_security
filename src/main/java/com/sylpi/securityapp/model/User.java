@@ -6,16 +6,18 @@ import java.util.Arrays;
 import java.util.List;
 
 @Entity
+@Table(name = "myusers")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id_user")
     private long id;
 
-    @Column(nullable=false)
+    @Column(nullable=false, name = "username")
     private String username;
 
-    @Column(nullable = false)
+    @Column(nullable = false,  name = "password")
     private String password;
 
     private int active;
