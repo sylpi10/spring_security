@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <div th:replace="fragments.html :: myHeader"></div>
     <title>profile index</title>
@@ -9,8 +10,10 @@
     <div th:replace="fragments.html :: menu"></div>
 </header>
 
-<div class="container">
+<div class="container mt-5">
     <h1>hello, profile/index, only people with role_profile </h1>
+
+    <form th:replace="fragments.html :: infos"></form>
 </div>
 </body>
 </html>
