@@ -42,10 +42,19 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/api/public/test2").hasAuthority("ACCESS_TEST2")
                 .antMatchers("/api/public/users").hasRole("ADMIN")
                 .and()
-                .formLogin()
+                .formLogin() // work automatically with /login, username, password inputs...
+//                .loginProcessingUrl("/customUrl") customize url
+//                .usernameParameter("/customUsername")
+//                .passwordParameter("/customPassword")
                 .loginPage("/login").permitAll()
                 .and()
-                .logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/login");
+                .logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/login")
+                .and()
+                .rememberMe();
+//                .tokenValiditySeconds(2592000) validity for 30 days
+//                .rememberMeParameter("customRememberMe")
+
+
     }
 
     @Bean
