@@ -1,5 +1,6 @@
 
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+                xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <body>
 <head th:fragment="myHeader">
     <meta charset="UTF-8">
@@ -41,7 +42,8 @@
                 </ul>
 
                 <form class="form-inline my-2" form-method="post" th:action="@{/logout}">
-                    <button class="btn btn-outline-danger my-2" type="submit">Logout</button>
+                    <button sec:authorize="isAuthenticated()" class="btn btn-outline-danger my-2" type="submit">Logout</button>
+                    <button sec:authorize="isAnonymous()" th:href="@{~/login}" class="btn btn-outline-success my-2" type="submit">Login</button>
                 </form>
 
             </div>
