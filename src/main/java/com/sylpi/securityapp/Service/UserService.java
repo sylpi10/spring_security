@@ -1,6 +1,6 @@
 package com.sylpi.securityapp.Service;
 
-import com.sylpi.securityapp.model.User;
+import com.sylpi.securityapp.entity.User;
 import com.sylpi.securityapp.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

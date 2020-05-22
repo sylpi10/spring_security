@@ -1,4 +1,4 @@
-package com.sylpi.securityapp.model;
+package com.sylpi.securityapp.entity;
 
 import javax.persistence.*;
 import java.util.ArrayList;

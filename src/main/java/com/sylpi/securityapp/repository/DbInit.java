@@ -1,6 +1,6 @@
 package com.sylpi.securityapp.repository;
 
-import com.sylpi.securityapp.model.User;
+import com.sylpi.securityapp.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
