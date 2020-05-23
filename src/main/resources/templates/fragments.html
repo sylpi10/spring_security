@@ -43,7 +43,7 @@
 
                 <form class="form-inline my-2" form-method="post" th:action="@{/logout}">
                     <button sec:authorize="isAuthenticated()" class="btn btn-outline-danger my-2" type="submit">Logout</button>
-                    <button sec:authorize="isAnonymous()" th:href="@{~/login}" class="btn btn-outline-success my-2" type="submit">Login</button>
+                    <a sec:authorize="isAnonymous()" th:href="@{~/login}" class="btn btn-outline-success my-2" type="submit">Login</a>
                 </form>
 
             </div>
